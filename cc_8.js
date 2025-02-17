@@ -15,3 +15,16 @@ function calculateDiscount(price, discountRate) {
 
 console.log(calculateDiscount(100, 0.2)); //"Final Price: $80.00"
 console.log(calculateDiscount(250, 0.15)); //"Final Price: $212.50"
+
+//Task 3: Arrow Function
+const calculateServiceFee = (amount, serviceType) => {
+    let service;
+    if (serviceType === `Premium`) service = .15; //15% of the amount
+    if (serviceType === `Standard`) service = .1; //10% of the amount
+    if (serviceType === `Basic`) service = .05; //5% of the amount
+    let fee = amount * service; //calculating the total
+    return `Service Fee: $${fee.toFixed(2)}`; //displaying service fee
+};
+
+console.log(calculateServiceFee(200, "Premium")); //"Service Fee: $30.00"
+console.log(calculateServiceFee(500, "Standard")); //"Service Fee: $50.00"
