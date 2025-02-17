@@ -46,3 +46,12 @@ const calculateRentalCost = (days, carType, insurance = false) => {
 
  console.log(calculateRentalCost(3, "Economy", true)); //"Total Rental Cost: $180"
  console.log(calculateRentalCost(5, "Luxury", false)); //"Total Rental Cost: $500"
+
+ //Task 5: Returning Values
+ function calculateLoanPayment(principal, rate, time) {
+    let loan = principal + (principal * rate * time); //formula for loan payment
+    return `Total Payment: $${loan.toFixed(2)}`; //displaying total
+ };
+
+ console.log(calculateLoanPayment(1000, 0.05, 2)); //"Total Payment: $1100.00"
+console.log(calculateLoanPayment(5000, 0.07, 3)); //"Total Payment: $6050.00"
